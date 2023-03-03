@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLoyee HOME PAGE</title>
+</head>
+<body>
+
+    <h1> EMPLOYEE EMPLOYEE EMPLOYEE </h1>
+    <br>
+    <h2> Add EMployee </h2>
+
+    <ul>
+        <li >
+          <a  href="/emp/add-emp/">Add Employee Here </a>
+        </li>
+    </ul>
+
+    {% comment %} use the href tage to embeedd the web pages links.. 
+    <a href = "/emp/add-emp/ url mentioned here >> .. 
+    
+     {% endcomment %}
+
+        <ul>
+        <li >
+          <a  href="/emp/testimonals/">Testimonals HERE </a>
+        </li>
+    </ul>
+
+            <ul>
+        <li >
+          <a  href="/emp/feedback/">Feedback Feedback HERE </a>
+        </li>
+    </ul>
+
+
+    <h1>  EMployee ADDED Details </h1>
+
+    {% for e in emp %}
+       <div>  {{e.id}} ---  {{e.name}} >>> {{e.phone_no}}   ----  {{e.location}}</div>
+    <ul>
+        <li >
+          <a  href="/emp/delete-emp/{{e.id}}">Delete EMP </a>
+        </li>
+    </ul>
+
+    {% comment %} Delete employee pass in the url pattern in the href = /emp/dlele-emp/{{}}{{e.id}} {% endcomment %}
+        <ul>
+        <li >
+          <a  href="/emp/update-emp/{{e.id}}">Update EMP </a>
+{% comment %} hEre you need to call the VIEWS Functions directly not the URL NAME HTML {% endcomment %}
+
+        </li>
+    </ul>
+
+    {% endfor %}
+
+
+    <br>
+
+    <br>
+    <br>
+
+    
+</body>
+</html>

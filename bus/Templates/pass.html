@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASSENGER DETAILS Capacity here </title>
+</head>
+
+<body>
+    <h1> passenger details </h1>
+
+
+<form action="">
+
+    {{f2}}
+
+    <button>SUBMIT</button>
+</form>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, ut rerum facilis voluptatem sunt temporibus
+        expedita sint minima repudiandae consectetur ipsa distinctio repellat natus dolore modi repellendus accusantium
+        ea enim nobis? Amet possimus voluptates obcaecati debitis nulla hic autem, fugit iure sed esse natus doloremque.
+        Quaerat odio eligendi, tempora assumenda ipsa voluptas non perspiciatis optio quo a blanditiis mollitia,
+        explicabo animi. Reiciendis, illum accusantium omnis, fugit saepe nihil provident voluptates distinctio cumque
+        eos ratione consequatur perspiciatis ex harum! Commodi inventore totam fugit tempore mollitia nihil, quo sequi,
+        fugiat soluta praesentium nam temporibus illo quae rerum sunt earum doloremque numquam ut?</p>
+
+    <form action="">
+        <label for="">Name </label>
+        <input type="text" name="name1" value="test">
+
+
+        <button>SUBMIT</button>
+    </form>
+
+<div> 
+    {% for a in d1  %}
+      <br>  {{a.name}} ---  {{a.caste}} ---  {{a.comment}}  -- {{a.child_no}} -- {{a.id}}
+<button> <a href="/pass/deletevalue/{{a.id}}">  Delete</a>  </button>
+<button> <a href="/pass/update/{{a.id}}">  Update</a>  </button>
+
+      <br>
+
+
+    {%  endfor %}
+
+    <br>
+
+    <form action="form/" method="POST">
+        {% csrf_token %}
+        {{form}}
+
+<button>Submit</button>
+    </form>
+
+</div>
+</body>
+
+</html>

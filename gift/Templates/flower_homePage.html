@@ -1,0 +1,75 @@
+{% load static %}
+{% comment %} {%  load post_tag %} {% endcomment %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOWER</title>
+    {% comment %} <link rel="stylesheet" href="/static/style.css"> {% endcomment %}
+    <link rel="stylesheet" href=" {% static 'style.css'   %}   ">
+
+    
+</head>
+<body>
+        <h1> FLOWER FLOWER  HOME PAGE </h1>
+
+        {% comment %} <h1> Totoal FLOWER COUNT HERE >> {% total_flower  %} </h1>   {% endcomment %}
+
+
+    <p>flower details here ....  >>>  </p>
+    <br>
+
+    {% comment %} <form action="/flowerorder/flower-confirm/"> {% endcomment %}
+
+    <form action="{%  url 'fconfirm'   %}" method = POST enctype ="multipart/form-data" >
+{% csrf_token %}
+
+        {{form}}
+
+<button>SUBMIT</button>
+    </form>
+
+Another form <br> 
+
+
+        {% comment %} <form action="{% url 'giftHomePage'  %}">
+
+        {{form}}
+
+<button>SUBMIT</button>
+    </form> {% endcomment %}
+
+
+    {%  for d in f    %}
+
+<div> {{d.name}}  --  {{d.picture}}  --  {{d.price}}  --  {{d.no}}  -- {{d.id}} 
+<img style="max-width : 250px;" src="/media1/{{d.picture}}" alt="pic">
+<button>    
+<a href="{{d.id}}"> Delete </a>
+</button>
+</div>
+{% endfor  %}
+
+
+
+	<h1 style="color:green;">
+		GeeksforGeeks
+	</h1>
+	<h2>
+		Window prompt() Method
+	</h2>
+
+	<button onclick="geek()">
+		Click me!
+	</button>
+
+    <script src="{%  static 'run.js'   %}"></script>
+
+</body>
+</html>
+
+
+
+

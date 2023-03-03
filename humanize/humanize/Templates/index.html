@@ -1,0 +1,44 @@
+{% load humanize %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX Page</title>
+</head>
+<body>
+    <h1> index page </h1>
+    <h2> type page</h2>
+    <h3> NON HUMANIZE Template</h3>
+    {% for a in l  %}
+        {{a | apnumber}} <br> 
+    {%  endfor   %}
+
+    {% for a in l  %}
+    {{a | ordinal}} <br> 
+    {%  endfor   %}
+
+    {% for a in l2  %}
+    {{a | intcomma}} <br> 
+    {%  endfor   %}
+
+<br>
+{{v  | capfirst | upper  }}
+
+<br>
+{{hello | safe | slugify }}
+<p></p>
+
+<p></p>
+<br>
+
+
+
+<br>
+{{hello | striptags | slugify }}
+</body>
+</html>
+
+

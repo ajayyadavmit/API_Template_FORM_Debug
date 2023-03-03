@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTIMONALS PAGE E</title>
+</head>
+<body>
+
+    <h1> ETESTIMONALS PAGES  </h1>
+    <br>
+    <h2> LISTED TESTIMNOALS </h2>
+
+
+        <ul>
+        <li >
+          <a  href="/emp/testimonals/">Testimonals HERE </a>
+        </li>
+    </ul>
+
+    <h1>  Testimonals ADDED Details </h1>
+
+    {% for t in testi %}
+       <div>  {{t.name}} ---  {{t.feedback}} >>> {{t.id}} </div>
+       <div> <img src ="/media/{{t.picture}}" >  </div>
+   
+
+    {% endfor %}
+
+
+    <br>
+
+    <br>
+    <br>
+
+    
+</body>
+</html>

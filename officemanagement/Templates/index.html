@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page Here </title>
+</head>
+<body>
+    <h1>index page </h1>
+    <h2>index page</h2>
+    <h3>index page </h3>
+
+    {% for d in data  %}
+    <div>
+        {{d.name}} >> {{d.cost}}  >> {{d.id}}
+        <div>
+            <label for="">Name :: </label>
+            <input type="text"  value =  {{d.name}} >
+        </div>
+        <div>
+            <label for=""> COST </label>
+            <input type="text" value="{{d.cost}}">
+        </div>
+    <ul>
+        <li >
+          <a  href="/delete-phone/{{d.id}}">Delete EMP </a>
+        </li>
+    </ul>
+
+          <button>Update </button>
+    </div>
+    {% endfor  %}
+
+
+</body>
+</html>

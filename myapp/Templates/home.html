@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME HOME HOME  >>> </title>
+</head>
+<body>
+    <h1>HOME HOME HOME <br> accessing dynamic values from the python program VIEWS </h1>
+    {% if isActive %}
+
+
+        {{date}}
+        <br>
+        {{name}}
+
+        <br>
+        {% for p in program_list %}
+        <div> {{p}} </div>
+        {% endfor %}
+        <br>
+        {% for k,v in student_data.items %}
+            {{k}}  {{v}}
+        {% endfor %}
+        <br>
+
+    {% endif %}
+
+    <hr> <hr> <br> <br>
+    {% comment %} <form action="/index/" method="POST"> {% endcomment %}
+    <form action="{% url 'hm' %}" method="POST">
+
+        {% csrf_token %} 
+        <input type="text" name="name1">
+        <input type="radio" name= "radio1">
+        <input type="checkbox" value="fillvalue" name = "check">
+        <button>SEND</button>
+        
+
+    </form>
+</body>
+</html>

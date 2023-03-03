@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELETE ORDER FLOWER</title>
+</head>
+<body>
+        <h1> FLOWER DELETE  HOME PAGE </h1>
+    <br>
+
+{%  for d in f    %}
+
+<div> {{d.name}}  --  {{d.picture}}  --  {{d.price}}  --  {{d.no}}  -- {{d.id}} 
+<img src="/media/{{d.picture}}" alt="pic">
+<button>    
+<a href="{{d.id}}"> Delete </a>
+</button>
+</div>
+{% endfor  %}
+
+
+
+ {% comment %} name = models.CharField(max_length=11)
+    price = models.IntegerField()
+    no = models.IntegerField()
+    total_price =  models.IntegerField(default=11)
+    mobileno = models.IntegerField()
+    address = models.CharField(max_length=11) {% endcomment %}
+    
+
+
+
+    <form action="">
+
+
+        {{form}}
+
+<button>SUBMIT</button>
+    </form>
+
+ <br> 
+
+
+</body>
+</html>
+
+
+
+

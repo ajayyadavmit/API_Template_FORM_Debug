@@ -1,0 +1,42 @@
+[
+    {
+        "model" : "emp.Employee",
+        "pk" : 1 ,
+        "fields" : {
+            "name" : "ajay yaav",
+            "age" : 17,
+            "adds" : "Sanepa KTM NEPAL "
+        }
+    },
+    {
+        "model" : "emp.Employee",
+        "pk" : 2 ,
+        "fields" : {
+            "name" : " yaav",
+            "age" : 17,
+            "adds" : "Sanepa KTM NEPAL "
+        }
+    },
+    {
+        "model" : "emp.Employee",
+        "pk" : 3 ,
+        "fields" : {
+            "name" : "shyam yaav",
+            "age" : 17,
+            "adds" : "Sanepa KTM NEPAL "
+        }
+    },
+    {
+        "model" : "emp.Employee",
+        "pk" : 4 ,
+        "fields" : {
+            "name" : "ramn yaav",
+            "age" : 17,
+            "adds" : "Sanepa KTM NEPAL "
+        }
+    }
+    
+]
+
+
+
